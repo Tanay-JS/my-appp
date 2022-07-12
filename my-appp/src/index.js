@@ -17,6 +17,7 @@ import Home from './Components/Home';
 import Main from './Components/Main';
 import Login from './Components/Login';
 import Redirect from './Components/redirect/Redirect';
+import FriendReq from './Components/FriendReq';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -35,7 +36,7 @@ root.render(
     <Route path="/Home" element={<Home />}/>
     <Route path="/Main" element={<Main />}/>
     <Route path="/Redirect" element={<Redirect />}/>
-    {/* <Route path="/Login" element={<Login />}/> */}
+    <Route path="/FriendReq" element={<FriendReq/>}/>
 
   </Routes>
     </BrowserRouter>

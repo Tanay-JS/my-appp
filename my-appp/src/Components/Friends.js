@@ -1,17 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect,useState } from 'react'
 import Navbar from './Navbar'
 import "./Friends.css"
 import {Link} from "react-router-dom"
 import Footer from './Footer'
 
-class Friends extends Component {
-  render() {
+function Friends() {
+ 
     return (
         <div>
         <Navbar />
         <h1 className="head">Friends</h1>
         <div>
-           <Link to="/Searchbar"><button className="btton">Add a friend</button></Link>                                                                           
+           <Link to="/Searchbar"><button className="btton">Add a friend</button></Link> &nbsp;  
+          <Link to= "/FriendReq"> <button >Friend Requests</button> </Link>                                                                       
           </div>
         <table>
             <tr>
@@ -23,6 +24,5 @@ class Friends extends Component {
         </div>
     )
   }
-}
 
 export default Friends
