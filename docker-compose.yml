@@ -1,0 +1,63 @@
+volumes:
+  data:
+
+services:
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=docker
+      - MONGO_INITDB_ROOT_PASSWORD=mongopw
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://docker:mongopw@mongodb:27017
+
+  discovery-service:
+    image: ghost03/pay_you_back_1:discovery-service
+    ports:
+      - 8761:8761
+    
+  gateway-service:
+      image: ghost03/pay_you_back_1:gateway-service
+      ports:
+        - 9002:9002
+      environment:
+        - JAVA_OPTS=
+          -EUREKA_SERVER=http://discovery-service:8761/eureka
+      depends_on:
+        - discovery-service
+
+  auth-service:
+      image: ghost03/pay_you_back_1:auth-service
+      ports:
+        - 9001:9001
+      environment:
+        - JAVA_OPTS=
+          -EUREKA_SERVER=http://discovery-service:8761/eureka
+      restart: on-failure
+      depends_on:
+        - discovery-service
+        - gateway-service
+        - mongodb
+
+  user-service:
+      image: ghost03/pay_you_back_1:user-service
+      ports:
+        - 9003:9003
+      environment:
+        - JAVA_OPTS=
+          -EUREKA_SERVER=http://discovery-service:8761/eureka
+      restart: on-failure
+      depends_on:
+        - discovery-service
+        - gateway-service
+        - mongodb
+
+
