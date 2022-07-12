@@ -1,0 +1,24 @@
+.hey{
+    width: 500px;
+    border: 6px solid #ff5b00;
+    padding: 50px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+    background-repeat: repeat;
+    border-radius: 25px;
+    background-color:black;
+    
+  }
+  
+  .rounded{
+      padding: 3px;
+      border-radius:10px;
+  
+  }
+  .image{
+      background-image:url("https://as1.ftcdn.net/v2/jpg/02/11/07/58/1000_F_211075851_gSKybVNvDWgZnrIaleNsQfIz2mqPKaor.jpg");
+      background-size:cover;
+      height: 100%;
+  }

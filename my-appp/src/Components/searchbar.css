@@ -1,0 +1,39 @@
+/* *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+} */
+body{
+    background-color: #1a1a1a;
+}
+.req{
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,helvetica neue,sans-serif;
+    font-weight: 100;
+    text-align: center;
+    color:#FF5B00  ;
+    padding-top: 200px;
+    font-size: 80px;
+}
+.search .butto{
+    background-color: #FF5B00;
+    color:black;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    }
+
+.butto:hover{
+    background-color: black;
+    color: #FF5B00;
+}
+.bar{
+    text-align: center;
+    
+}
+#in{
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    font-size: large;
+    border-radius: 20px;
+}

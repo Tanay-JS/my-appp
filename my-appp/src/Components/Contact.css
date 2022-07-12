@@ -1,0 +1,12 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+    
+}
+.Text{
+    font-family: 'Roboto Serif', serif;
+    text-align: center;
+    color: #FF5B00;
+}

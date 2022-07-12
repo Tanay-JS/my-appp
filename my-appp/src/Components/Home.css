@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+    
+}
+    
+
+.Heading{
+   
+   
+  
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    color: black;
+    /* background-color:#FF5B00 ; */
+    
+   
+}
+
+body{
+   background-color: #1a1a1a;
+   text-align: center;
+   color: #FF5B00;
+
+}
+
+.para{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 10;
+    color: black;
+    background-color: aquamarine;
+    
+}
+.info{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 10;
+    /* color: #FF5B00 ; */
+    font-size: 25px;
+    padding: 80px;
+    text-align: center;
+}
+.info:hover{
+background-color: black;
+}
+.login{
+    color: white;
+    float: left;
+}
+.login:hover{
+    background-color: black;
+}
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 3px;
+    
+    
+  }
+  img{
+    border-radius: 10px;
+  }
+  .row{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+  }
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  button{
+
+    background-color: #FF5B00;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 17px;
+
+
+  }
+  button:hover{
+    background-color: #1a1a1a;
+    color: #FF5B00;
+  }
+
+.box{
+    width: 500px;
+    border: 6px solid #ff5b00;
+    padding: px;
+    margin-top: px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+    background-repeat: repeat;
+    border-radius: 25px;
+    background-color:black;
+
+  }

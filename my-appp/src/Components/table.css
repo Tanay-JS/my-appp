@@ -1,0 +1,21 @@
+table{
+    margin-top:80px;
+}
+th,td{
+    font-size:20px;
+    padding-left: 100px;
+    padding-right:100px;    
+    height: 40px;
+    border-radius: 5px;
+    border-color: grey;
+    border-block-color: grey;
+    border-block-end-color: red;
+    border-block-start-color: aqua;
+}
+
+th
+{
+    background-color: grey;
+    /* border-collapse: collapse; */
+}
+
