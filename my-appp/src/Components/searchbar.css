@@ -30,6 +30,13 @@ body{
     text-align: center;
     
 }
+.ul1{
+    text-align: center;
+    padding-right: 40%;
+}
+.li1{
+    text-align: center;
+}
 #in{
     width: 300px;
     height: 40px;
