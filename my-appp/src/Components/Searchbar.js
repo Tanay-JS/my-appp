@@ -78,6 +78,7 @@ return(
  <center>
  {isShown && ( 
   <div>
+    {pen.pendingRequests.map((item)=>(<ul className="ul1"><li className="li1">{item}</li></ul>))}
     <Searchbarunsend />
   </div>
   )}
