@@ -79,3 +79,10 @@
   background-color: black;
   color: #ff5b00;
 }
+.link {
+  text-decoration: none;
+  color: black;
+}
+.link:hover{
+  color: #FF5B00;
+}

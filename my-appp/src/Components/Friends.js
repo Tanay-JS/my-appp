@@ -21,6 +21,7 @@ class Friends extends Component {
   }
 
     componentDidMount(){
+      // window.location.reload()
         fetch('http://localhost:9002/user/details/'+(JSON.parse(localStorage.getItem('email'))), {
           headers: { 
         

@@ -23,34 +23,60 @@ services:
     image: ghost03/pay_you_back_1:discovery-service
     ports:
       - 8761:8761
-    
+
   gateway-service:
-      image: ghost03/pay_you_back_1:gateway-service
-      ports:
-        - 9002:9002
-      environment:
-        - JAVA_OPTS=
-          -EUREKA_SERVER=http://discovery-service:8761/eureka
-      depends_on:
-        - discovery-service
+    image: ghost03/pay_you_back_1:gateway-service
+    ports:
+      - 9002:9002
+    environment:
+      - JAVA_OPTS=
+        -EUREKA_SERVER=http://discovery-service:8761/eureka
+    depends_on:
+      - discovery-service
 
   auth-service:
-      image: ghost03/pay_you_back_1:auth-service
-      ports:
-        - 9001:9001
-      environment:
-        - JAVA_OPTS=
-          -EUREKA_SERVER=http://discovery-service:8761/eureka
-      restart: on-failure
-      depends_on:
-        - discovery-service
-        - gateway-service
-        - mongodb
+    image: ghost03/pay_you_back_1:auth-service
+    ports:
+      - 9001:9001
+    environment:
+      - JAVA_OPTS=
+        -EUREKA_SERVER=http://discovery-service:8761/eureka
+    restart: on-failure
+    depends_on:
+      - discovery-service
+      - gateway-service
+      - mongodb
 
   user-service:
-      image: ghost03/pay_you_back_1:user-service
+    image: ghost03/pay_you_back_1:user-service
+    ports:
+      - 9003:9003
+    environment:
+      - JAVA_OPTS=
+        -EUREKA_SERVER=http://discovery-service:8761/eureka
+    restart: on-failure
+    depends_on:
+      - discovery-service
+      - gateway-service
+      - mongodb
+
+  transaction-service:
+    image: ghost03/pay_you_back_1:transaction-service
+    ports:
+      - 9004:9004
+    environment:
+      - JAVA_OPTS=
+        -EUREKA_SERVER=http://discovery-service:8761/eureka
+    restart: on-failure
+    depends_on:
+      - discovery-service
+      - gateway-service
+      - mongodb
+
+  schedule-service:
+      image: ghost03/pay_you_back_1:schedule-service
       ports:
-        - 9003:9003
+        - 9005:9005
       environment:
         - JAVA_OPTS=
           -EUREKA_SERVER=http://discovery-service:8761/eureka
@@ -59,5 +85,3 @@ services:
         - discovery-service
         - gateway-service
         - mongodb
-
-

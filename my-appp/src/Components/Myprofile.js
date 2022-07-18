@@ -1,9 +1,4 @@
 import React, { useState, useEffect } from 'react'
-// import './Home.css'
-// import User from './User'
-import User2 from './useru/User2'
-import User1 from './useru/User1'
-import User3 from './useru/User3'
 import Navbar from './Navbar'
 import Footer from './Footer'
 
@@ -82,7 +77,7 @@ function Home() {
                 <td><img style={{width:"300px"}}src='https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg'/></td>
                 <td style={{float:"right",color:"#FF5B00"}}> 
                 <span className='details'>Fullname: {users.firstName+" "+users.lastName}</span><br></br>
-                <span style={{display:"flex"}}>Email: {users.email}<User3 /></span>
+                <span style={{display:"flex"}}>Email: {users.email}</span>
                 </td>
                 
             </tr>

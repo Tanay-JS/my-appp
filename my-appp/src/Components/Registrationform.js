@@ -39,17 +39,17 @@ const RegistrationForm=() =>{
           }
           var z = document.forms["myForm"]["email"].value;
           if (z == "" || z == null) {
-            alert("Name must be filled out");
+            alert("Email must be filled out");
             return false;
           }
           var a = document.forms["myForm"]["password"].value;
           if (a == "" || a == null) {
-            alert("Name must be filled out");
+            alert("Password must be filled out");
             return false;
           }
           var b = document.forms["myForm"]["confirmPassword"].value;
           if (b == "" || b == null) {
-            alert("Name must be filled out");
+            alert("Confirm your password");
             return false;
           }
 

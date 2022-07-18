@@ -10,8 +10,8 @@ function Navbar1() {
   <ul>
   <img src={require('./logo.jpeg')} className="img" alt="logo"/>
     <li><Link to="/Contact">Contact us</Link></li>
-    <li><Link to="/Loogin">Login </Link></li>
-    <li><Link to="/Signup" >Signup</Link></li>
+    <li><Link to="/Main">Login </Link></li>
+    <li><Link to="/RegistrationForm" >Signup</Link></li>
     <li><Link to="/" >Home</Link></li> 
   </ul>
 </div>

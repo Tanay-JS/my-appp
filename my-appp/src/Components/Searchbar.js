@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import "./searchbar.css";
-import Searchbarunsend from "./Searchbar/Searchbarunsend";
 
 function Searchbar() {
 
@@ -51,7 +50,18 @@ const [pen, penreq] =useState({
               
               };
 
-              // const[toemail, setToemail]= useState([]);
+              const handleUnsend=(item)=>{
+     
+                fetch("http://localhost:9002/user/remove/request/"+(JSON.parse(localStorage.getItem('email')))+"/"+(item), 
+               {
+                   method: 'GET',
+                   headers: { 
+                   "Content-Type": "application/json",
+                   "Authorization" :JSON.parse(localStorage.getItem('token')) 
+               } 
+               }).then(alert('Successfully unsent'))
+               .then(window.location.reload())
+              }
               
 return(
     <div className ="search">
@@ -62,7 +72,7 @@ return(
     <div className="bar">
       <form onSubmit={handlesubmit}>
     < input  
-    type="text"
+    type="email"
     placeholder="Enter Email"
     value={email}
     onChange={(e)=> setemail(e.target.value)} />
@@ -78,8 +88,7 @@ return(
  <center>
  {isShown && ( 
   <div>
-    {pen.pendingRequests.map((item)=>(<ul className="ul1"><li className="li1">{item}</li></ul>))}
-    <Searchbarunsend />
+    {pen.pendingRequests.map((item)=>(<ul className="ul1"><li className="li1">{item}<button onClick={()=> handleUnsend(item)}>Unsend</button></li></ul>))}
   </div>
   )}
 </center>

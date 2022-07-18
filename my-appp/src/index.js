@@ -10,7 +10,7 @@ import Individual from './Components/Individual';
 import Dashbord from './Components/Dashbord';
 import Contact from './Components/Contact';
 import Myprofile from "./Components/Myprofile"
-import Sendloan from './Components/Sendloan';
+// import Sendloan from './Components/Sendloan';
 import Requestloan from './Components/Requestloan';
 import RegistrationForm from './Components/Registrationform';
 import Home from './Components/Home';
@@ -30,7 +30,7 @@ root.render(
     <Route path="/Dashbord" element={<Dashbord/>}/>
     <Route path="Contact" element={<Contact/>}/>
     <Route path="MyProfile" element={<Myprofile />}/>
-    <Route path="Sendloan" element={<Sendloan />}/>
+    {/* <Route path="Sendloan" element={<Sendloan />}/> */}
     <Route path="Requestloan" element={<Requestloan />}/>
     <Route path="/RegistrationForm" element={<RegistrationForm/>}/>
     <Route path="/Home" element={<Home />}/>
