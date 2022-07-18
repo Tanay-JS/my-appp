@@ -10,7 +10,6 @@ import Individual from './Components/Individual';
 import Dashbord from './Components/Dashbord';
 import Contact from './Components/Contact';
 import Myprofile from "./Components/Myprofile"
-// import Sendloan from './Components/Sendloan';
 import Requestloan from './Components/Requestloan';
 import RegistrationForm from './Components/Registrationform';
 import Home from './Components/Home';
@@ -18,6 +17,7 @@ import Main from './Components/Main';
 import Login from './Components/Login';
 import Redirect from './Components/redirect/Redirect';
 import FriendReq from './Components/FriendReq';
+import Receivedreq from './Components/Receivedreq'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -30,7 +30,7 @@ root.render(
     <Route path="/Dashbord" element={<Dashbord/>}/>
     <Route path="Contact" element={<Contact/>}/>
     <Route path="MyProfile" element={<Myprofile />}/>
-    {/* <Route path="Sendloan" element={<Sendloan />}/> */}
+    <Route path="Receivedreq" element={<Receivedreq />}/>
     <Route path="Requestloan" element={<Requestloan />}/>
     <Route path="/RegistrationForm" element={<RegistrationForm/>}/>
     <Route path="/Home" element={<Home />}/>
