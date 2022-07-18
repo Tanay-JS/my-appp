@@ -84,7 +84,7 @@ function Individual() {
         <Navbar />
         <h1 className="head">{users1.firstName}</h1>
         <Link to="/Friends" style={{color:"#FF5B00",fontSize:"30px",float:"left"}}>Back</Link> 
-        <button onClick={(e) => {removeHandler(e);window.location.href="/Friends";}} style={{float:"right"}}>Remove Friend</button>
+        <button onClick={removeHandler()} style={{float:"right"}}>Unfriend</button>
          <table>
             <tr>
                 <td><img style={{width:"300px"}}src='https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg'/></td>
@@ -95,7 +95,7 @@ function Individual() {
                 <td>
                 <div>
                 <button><Link to="/Requestloan" className='link' state={data1}>Request Loan</Link></button><br></br>  
-                <button><Link to="/Sendloan" className='link'>Received Requests</Link></button>
+                <button><Link to="/Receivedreq" className='link'>Received Requests</Link></button>
                 </div>
                 </td>
             </tr>
