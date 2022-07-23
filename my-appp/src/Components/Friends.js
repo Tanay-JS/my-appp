@@ -40,8 +40,13 @@ class Friends extends Component {
         <Navbar />
         <h1 className="head">Friends</h1>
         <div>
-           <Link to="/Searchbar"><button className="btton">Add a friend</button></Link> &nbsp;  
-          <Link to= "/FriendReq"> <button>Friend Requests</button> </Link>                                                                       
+          <table style={{marginLeft:"15%"}}>
+          <tr>  
+          <td style={{marginLeft:"10%"}}><Link to="/Searchbar"><button>Add a friend</button></Link></td> 
+          <td style={{marginLeft:"15%"}}><Link to= "/FriendReq"> <button>Friend Requests</button> </Link></td> 
+          <td style={{marginLeft:"15%"}}><Link to="/Receivedreq"><button>Manage Loans</button></Link></td>
+          </tr>    
+          </table>                                                                 
           </div>
         <table style={{marginBottom:"100px",marginLeft:"2%"}}>
             <tr>
