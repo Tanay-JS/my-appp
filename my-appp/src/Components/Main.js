@@ -129,7 +129,7 @@ const submitHandler = b=>{
         <br></br>
         <br></br>
         <label style={{'color': '#ff5b00','fontFamily':'Tahoma'}}>PASSWORD : </label>
-        <input type="password" name="password" placeholder="Password" onChange={changeHandler} />
+        <input type="password" name="password" placeholder="Password" onChange={changeHandler} className="rounded"/>
         <br></br>
         {/* <p id="text" style={{'color': '#ff5b00','fontFamily':'Tahoma'}}>CAPS IS ON</p> */}
         <br></br>

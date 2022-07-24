@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import './Myprofile.css'
 
 
 function Home() {
@@ -72,7 +73,7 @@ function Home() {
         <h1 className='head'>{users.firstName}</h1> 
         <div className='body'>
          
-        <table style={{marginBottom:"100px"}}>
+        <table className='stu'>
             <tr>
                 <td><img style={{width:"300px"}}src='https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg'/></td>
                 <td style={{float:"right",color:"#FF5B00"}}> 

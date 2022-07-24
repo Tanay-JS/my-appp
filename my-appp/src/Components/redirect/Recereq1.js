@@ -74,6 +74,7 @@ function Recereq1() {
       <h1>Request from:{req12.fromName}</h1>
       <button onClick={handleAccept}>Accept</button>
       <button onClick={handleReject}>Reject</button>
+      <h2>Note: Accepting a loan request means you're digitally signing the agreement automatically.</h2>
     </div>
   )
 }

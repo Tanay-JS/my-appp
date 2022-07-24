@@ -75,7 +75,8 @@ return(
     type="email"
     placeholder="Enter Email"
     value={email}
-    onChange={(e)=> setemail(e.target.value)} />
+    onChange={(e)=> setemail(e.target.value)} style={{padding: "3px",
+    borderRadius:"10px"}}/>
    <br></br>
    <br></br>
     <button type="Submit">Send</button>

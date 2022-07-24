@@ -89,6 +89,7 @@ function Requestloan() {
     <div>
          <Link to="/Individual" style={{color:"#FF5B00",fontSize:"30px"}} state={data12}>Back</Link>
          <div className='forms'>
+          
         <h1>Request Loan</h1>
         <br></br>
         <form>
@@ -97,7 +98,8 @@ function Requestloan() {
         <label>Duration:</label> <input type={"text"} name="days" placeholder="Days" onChange={huluhulu}></input><br></br>
         </form>
         <br></br>
-        <button  className='button' onClick={submitHandler1}>Request</button>
+        <button  className="bx" onClick={submitHandler1}>Request</button>
+        <h6 style={{marginTop:"2%"}}>Note: Sending a loan request means you're digitally signing the agreement automatically.</h6>
         </div>
         {/* <p>toname={data2.toName}</p> */}
     </div>

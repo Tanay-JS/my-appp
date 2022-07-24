@@ -1,10 +1,14 @@
-table{
-    margin-top:80px;
+
+
+table.history{
+    /* margin-top:5px; */
+    margin-left: 17%;
+    
 }
-th,td{
+table.history th,td{
     font-size:20px;
-    padding-left: 100px;
-    padding-right:100px;    
+    padding-left: 50px;
+    padding-right:50px;    
     height: 40px;
     border-radius: 5px;
     border-color: grey;
@@ -13,7 +17,7 @@ th,td{
     border-block-start-color: aqua;
 }
 
-th
+table.history th
 {
     background-color: grey;
     /* border-collapse: collapse; */

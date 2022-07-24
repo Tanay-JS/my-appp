@@ -28,7 +28,7 @@ class Dashbord extends Component{
       <br></br>
       <h1>Welcome to PayUback</h1>
       <br></br>
-      <h1>No More awkwardness taking loan from a friend </h1>
+      <h1>No More awkwardness in taking loans from a friend </h1>
       <br></br>
       <br></br>
       <h2>Send a friend request to your friend and request for a loan via PayUback</h2>
