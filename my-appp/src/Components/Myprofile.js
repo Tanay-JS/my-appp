@@ -21,7 +21,9 @@ const [reqxs1,setReqxs1]=useState({
    "uniqueId":[],
    "name":[],
    "email":[],
-   "amount":[]
+   "amount":[],
+   "days":[],
+   "interest":[]
   }],
   "borrowRequests": [{
    "uniqueId":[],
@@ -83,6 +85,7 @@ const [reqxs1,setReqxs1]=useState({
         <div className='body'>
          
         <table className='stu'>
+          <tbody>
             <tr>
                 <td><img style={{width:"300px"}}src='https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg'/></td>
                 <td style={{float:"right",color:"#FF5B00"}}> 
@@ -91,15 +94,30 @@ const [reqxs1,setReqxs1]=useState({
                 </td>
                 
             </tr>
+            </tbody>
         </table>
+        <div>
+          
+        <h1 style={{textAlign:"left",marginLeft:"33%",marginBottom:"2%"}}>Loan history:</h1>
         <table className='history'>
+          <tbody>
           <tr>
             <th>Name</th>
             <th>Amount</th>
-            <th>Days</th>
             <th>Duration</th>
+            <th>Interest</th>
           </tr>
+          {reqxs1.acceptedBorrowRequests.map(histx=>(
+            <tr key={histx.uniqueId}>
+              <td>{histx.name}</td>
+              <td>{histx.amount}RS</td>
+              <td>{histx.days}Days</td>
+              <td>{histx.interest}%</td>
+            </tr>
+          ))}
+          </tbody>
         </table>
+        </div>
         
         </div>
         <Footer />
