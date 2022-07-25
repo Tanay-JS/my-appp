@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
-
+import './forcss.css';
 function Accereq() {
 
     const location = useLocation();
@@ -100,18 +100,40 @@ function Accereq() {
 
   return (
     <div><Link to="/Receivedreq" style={{color:"#FF5B00",fontSize:"30px",float:"left"}}>Back</Link> 
-    <h1>Amount:{req13.amount}</h1>
-    <h1>Duration:{req13.days}</h1>
-    <h1>Interest:{req13.interest}</h1>
-    <h1>Request from:{req13.fromName}</h1>
-    <h1>Amount Payed:{req13.amountPayed}</h1>
-    <h1>Amount Payed Back:{req13.amountPayedBack}</h1>
+    <center>
+    <table className='ta'>
+      <tr>
+        <td className='ta'>Request From:</td>
+        <td className='ta'>{req13.fromName}</td>
+      </tr>
+      <tr>
+    <td className='ta'>Amount:</td>
+   <td className='ta'> {req13.amount}</td>
+    </tr>
+    <tr>
+      <td className='ta'>Duration:</td>
+    <td className='ta'>{req13.days}</td>
+    </tr>
+    <tr>
+      <td className='ta'>Interest:</td>
+    <td className='ta'>{req13.interest}</td>
+    </tr>
+    <tr>
+      <td className='ta'>Amount Payed:</td>
+    <td className='ta'>{req13.amountPayed}</td>
+    </tr>
+    <tr>
+      <td className='ta'>Amount Payed Back:</td>
+    <td className='ta'>{req13.amountPayedBack}</td>
+    </tr>
+    </table>
    {req13.amountPayed!=req13.amount && req13.fromName!=usersn.firstName &&
       <button onClick={handlePayment}>Pay Rs {req13.amount}</button>
     
     }
     
     <button onClick={handleRemove}>Remove</button>
+    </center> 
     </div>
   )
 }

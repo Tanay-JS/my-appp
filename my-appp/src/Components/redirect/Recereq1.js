@@ -96,7 +96,7 @@ function Recereq1() {
       <br></br>
       <button onClick={handleAccept}>Accept</button>
       <button onClick={handleReject}>Reject</button>
-      <h2>Note: Accepting a loan request means you're digitally signing the agreement automatically.</h2>
+     
 
       </center>
       </div>
