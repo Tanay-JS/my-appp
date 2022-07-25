@@ -51,6 +51,7 @@ function Recereq1() {
       },
     }).then(response => response.json())
     .then(result => {console.log(result)})
+    .then(alert("Accepted"))
   }
 
   const handleReject=()=>{
@@ -63,6 +64,7 @@ function Recereq1() {
       },
     }).then(response => response.json())
     .then(result => {console.log(result)})
+    .then(alert("Rejected"))
   }
 
 

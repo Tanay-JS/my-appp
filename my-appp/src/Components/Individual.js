@@ -77,7 +77,7 @@ function Individual() {
       }
     })
     .then(response => response.json())
-    .then(result => {
+    .then(result => {console.log(result)
                     setReq15((result));
     })
   }
