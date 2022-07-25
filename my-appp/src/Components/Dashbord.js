@@ -42,11 +42,8 @@ class Dashbord extends Component{
       <center>
       <h1>Download PayUback on</h1>
 <br></br>
-
-<div className="pic2">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/512px-Google_Play_Store_badge_EN.svg.png" width={200}/>
-    {/* &nbsp;&nbsp;<img src={require('./app store.PNG')} width={200}/> */}
- </div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/512px-Google_Play_Store_badge_EN.svg.png" width={200}/>
+&nbsp;&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/640px-Download_on_the_App_Store_Badge.svg.png"width={200}/>
       </center>
       <div className='picbot'>
         <center>

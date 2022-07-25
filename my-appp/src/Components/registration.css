@@ -13,12 +13,19 @@
   }
   
   .rounded{
-      padding: 3px;
-      border-radius:10px;
+      padding: 5px;
+      border-radius: 5px;
+      width: 2s00px;
+      
   
   }
   .image{
       background-image:url("https://as1.ftcdn.net/v2/jpg/02/11/07/58/1000_F_211075851_gSKybVNvDWgZnrIaleNsQfIz2mqPKaor.jpg");
       background-size:cover;
       height: 100%;
+  }
+  .label{
+    width: 200px;
+    display: inline-block;
+    text-align: center;
   }
