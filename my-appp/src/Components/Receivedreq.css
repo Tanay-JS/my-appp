@@ -1,0 +1,11 @@
+table .tab,td .tab,th{
+    border: 1px solid white;
+    border-radius: 0%;
+    border-collapse:collapse;
+    width:auto;
+  }
+  
+  td.tab{
+    width: fit-content;
+    white-space:nowrap;
+  }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
+import "./forcss.css"
 
 function Recereq1() {
   const location = useLocation();
@@ -67,14 +68,42 @@ function Recereq1() {
 
   return (
     <div>
-      <Link to="/Receivedreq" style={{color:"#FF5B00",fontSize:"30px",float:"left"}}>Back</Link> 
-      <h1>Amount:{req12.amount}</h1>
-      <h1>Duration:{req12.days}</h1>
-      <h1>Interest:{req12.interest}</h1>
-      <h1>Request from:{req12.fromName}</h1>
+
+      <Link to="/Receivedreq" style={{color:"#FF5B00",fontSize:"30px",float:"left"}}>Back</Link> <br></br>
+      
+      <div className='forcss'>
+      <h1 style={{fontSize:"50px"}}>Payment Details</h1> <br></br>
+      <center>
+      <table className='ta'>
+      <tr>
+          <td className='ta' style={{align:"left"}}>Name :</td>
+          <td className='ta'>{req12.fromName}</td>
+        </tr>
+        <tr className='ta'>
+          <td className='ta' style={{align:"left"}}>Amount :</td>
+          <td className='ta'>{req12.amount}</td>
+        </tr>
+        <tr>
+        <td className='ta' style={{align:"left"}}>Days :</td>
+          <td className='ta'>{req12.days}</td>
+          </tr>
+          <tr>
+          <td className='ta' style={{align:"left"}}>interest :</td>
+          <td className='ta'>{req12.interest}</td>
+          </tr>
+          
+      </table>
+      <br></br>
       <button onClick={handleAccept}>Accept</button>
       <button onClick={handleReject}>Reject</button>
       <h2>Note: Accepting a loan request means you're digitally signing the agreement automatically.</h2>
+
+      </center>
+      </div>
+      
+
+      <h2>Note: Accepting a loan request means you're digitally signing the agreement automatically.</h2>
+
     </div>
   )
 }
