@@ -138,7 +138,7 @@ const submitHandler = b=>{
     <br></br>
      <h3 style={{'color': '#ff5b00','fontFamily':'Tahoma'}}> New User? </h3>
      <br></br>
-     <button style={{'color': '#ff5b00','fontFamily':'Tahoma'}}><Link to="/Registrationform">Sign Up</Link></button>
+     <Link to="/Registrationform"><button>Sign Up</button></Link>
 
      
 

@@ -134,7 +134,7 @@ const RegistrationForm=() =>{
               <br></br>
               <br></br>
              
-              <button><Link to="/Main">Sign In</Link></button>
+              <Link to="/Main"><button>Sign In</button></Link>
               
               </div>
         </form>

@@ -46,7 +46,7 @@ function Home() {
 
     <br></br>
     <br></br>
-<button><Link to="/RegistrationForm">Register</Link></button>
+<Link to="/RegistrationForm"><button>Register</button></Link>
 
 </div>
 <Footer />
