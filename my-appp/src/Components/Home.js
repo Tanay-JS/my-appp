@@ -43,6 +43,7 @@ function Home() {
 <br></br>
 </div>
 <div style={{marginBottom:"2%"}}>
+
     <br></br>
     <br></br>
 <button><Link to="/RegistrationForm">Register</Link></button>
