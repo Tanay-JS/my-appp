@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import './Myprofile.css'
+import './table.css'
 
 
 function Home() {
@@ -15,32 +16,32 @@ function Home() {
     "roles" : ["LENDER","BORROWER"]
 })
 
-  // constructor() {
-  //   super()
-  
-  //   this.state = {
-  //      users : 
-  //       {
-  //           "firstName": "",
-  //           "lastName": "",
-  //           "email": ""
-  //       }
-       
-  //   }
-  // }
+const [reqxs1,setReqxs1]=useState({
+  "acceptedBorrowRequests": [{
+   "uniqueId":[],
+   "name":[],
+   "email":[],
+   "amount":[]
+  }],
+  "borrowRequests": [{
+   "uniqueId":[],
+   "name":[],
+   "email":[],
+   "amount":[]
+  }],
+  "email": "",
+  "firstName": "",
+  "lastName": "",
+  "pendingBorrowRequests": []
+})
 
   useEffect(() => {
-    fetchData()
-    // componentDidMount()
+    fetchData();
+    fetchTransactions1();
   }, [])
 
 
   const fetchData=() => {
-    // preventDefault();
-    // console.log(e.target.email)
-    console.log(localStorage.getItem('email'))
-    console.log(localStorage.getItem('token'))
-    // const url="http://localhost:9002/auth/user/"+(JSON.parse(localStorage.getItem('email')))
     fetch("http://localhost:9002/auth/user/"+(JSON.parse(localStorage.getItem('email'))),
     {
       method:"GET",
@@ -52,14 +53,22 @@ function Home() {
       // mode:"no-cors"
     })
     .then(response => response.json())
-    .then(result => {console.log(result);
+    .then(result => {
                     setUsers((result));
     })
-    // .then(console.log(users))
-    // .then(result => this.setState({users : (result)}))
-    // .then(console.log(this.state.users))
-    // .catch(err => console.log(err))
+  }
 
+  const fetchTransactions1= () => {
+      fetch("http://localhost:9002/transaction/user/details/"+((JSON.parse(localStorage.getItem('email')))),
+      {
+        method:"GET",
+        headers: {
+          "Content-Type" : "application/json",
+          "Authorization" : JSON.parse(localStorage.getItem('token')) 
+        },
+      })
+      .then(response => response.json())
+      .then(result => {setReqxs1(result);})
   }
 
 
@@ -83,8 +92,14 @@ function Home() {
                 
             </tr>
         </table>
-        {/* <img src={require('./logo.jpeg')} className="pic"/> */}
-        {/* <User /> */}
+        <table className='history'>
+          <tr>
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Days</th>
+            <th>Duration</th>
+          </tr>
+        </table>
         
         </div>
         <Footer />

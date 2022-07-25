@@ -53,7 +53,7 @@ function Receivedreq() {
             },
           })
           .then(response => response.json())
-          .then(result => {console.log(result);setReqxs(result);})
+          .then(result => {setReqxs(result);})
         
         //   const uid = reqxs.borrowRequests.map(pbr2=>(pbr2.uniqueId))
         // const ft2 =
