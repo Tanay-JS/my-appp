@@ -124,43 +124,19 @@ const submitHandler = b=>{
 
       
       <form onSubmit={submitHandler} name="myForm" method='post' required>
-        <label style={{'color': '#ff5b00','fontFamily':'Tahoma'}} >  EMAIL   : </label>
-        <input type="email" name="email" placeholder="Email" onChange={changeHandler} className="rounded"/>
+        <label style={{'color': '#ff5b00','fontFamily':'Tahoma'}} >EMAIL:</label> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email" placeholder="Email" onChange={changeHandler} className="rounded"/>
         <br></br>
         <br></br>
-        <label style={{'color': '#ff5b00','fontFamily':'Tahoma'}}>PASSWORD : </label>
+        <label style={{'color': '#ff5b00','fontFamily':'Tahoma'}}>PASSWORD: </label>
+
         <input type="password" name="password" placeholder="Password" onChange={changeHandler} className="rounded"/>
         <br></br>
-        {/* <p id="text" style={{'color': '#ff5b00','fontFamily':'Tahoma'}}>CAPS IS ON</p> */}
         <br></br>
-        <br></br>
-        {/* <input type="checkbox" onClick={myFunction}></input> */}
-        
-        <label style={{'color': '#ff5b00','fontFamily':'Tahoma'}}> SHOW PASSWORD </label>
-        <br></br>
-    
-      
-   
-      
-
-
-
-<br></br>
 
      <input type="submit" value="Submit" className="button"></input>
      <br></br>
-     <br></br>
-     <input type="reset" value="reset" className="reset"></input>
-      
-
-
-     <h3 style={{'color': '#ff5b00','fontFamily':'Tahoma'}}>Authenticate using</h3>
-     <br></br>
-     {/* <Login/> */}
-      
-          
-     <br></br>
-     <h3 style={{'color': '#ff5b00','fontFamily':'Tahoma'}}> NOT REGISTERED </h3>
+    <br></br>
+     <h3 style={{'color': '#ff5b00','fontFamily':'Tahoma'}}> New User? </h3>
      <br></br>
      <button style={{'color': '#ff5b00','fontFamily':'Tahoma'}}><Link to="/Registrationform">Sign Up</Link></button>
 
