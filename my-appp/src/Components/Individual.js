@@ -23,6 +23,13 @@ function Individual() {
       data1=data13;
     // console.log(data1);
 
+    const location3 = useLocation();
+    const data134 = location3.state;
+      
+      JSON.stringify(data134);
+      if(!data1)
+        data1=data134;
+
     const [users1,setUsers1] = useState({
       "id":[],
       "firstName":"",
@@ -133,11 +140,11 @@ function Individual() {
                    
                   
     <tr style={{color:"#ff5b00",textAlign:"center"}}>
-                    <td>{hista.fromName}</td>
+                    <td>{hista.toName}</td>
                     <td>{hista.amount}</td>
                     <td>{hista.interest}</td>
                     <td>{hista.days}</td>
-                    <td><button>Pay Back</button></td>        
+                    <td><Link to={"/Detailsx"} state={hista.uniqueId}><button>View Details</button></Link></td>        
     </tr>
         </table>}</div>))}
         
