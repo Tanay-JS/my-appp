@@ -92,32 +92,29 @@ const RegistrationForm=() =>{
     <Link to="/Home" style={{color:"#FF5B00",fontSize:"30px"}}>Back</Link>
     <div>
         <form className='hey' onSubmit={submitHandler} name="myForm" method='post' required >
+        <h1>CREATE AN ACCOUNT</h1>
             
-           
+           <div className='label'>
           
           
             
-            <h1>REGISTRATION FORM</h1>
+          
             <br></br>
-                            
-                  <label style={{'color': '#ff5b00','fontFamily':'Tahoma'}} >FIRST NAME :  </label>
-                  
-                  <input  type="text" name="firstName" placeholder="First Name" class="rounded" onChange={changeHandler}/>
-                  <br></br>
-                  <br></br>
+                          
+      <input  type="text" name="firstName" placeholder="First Name" class="rounded" onChange={changeHandler}/>
+                  <br></br><br></br>
+
               
               
-                  <label style={{'color': '#ff5b00','fontFamily':'Tahoma'}} for="lastName">LAST NAME : </label>
-                  <input  type="text" name="lastName"  placeholder="LastName" class="rounded" onChange={changeHandler}/>
+              <input  type="text" name="lastName"  placeholder="Last Name" class="rounded" onChange={changeHandler}/>
                   <br></br>
                   <br></br>
              
-                  <label style={{'color': '#ff5b00','fontFamily':'Tahoma'}} for="email">EMAIL : </label>
-                  <input  type="email" name="email" placeholder="Email" class="rounded" onChange={changeHandler}/>
+           <input  type="email" name="email" placeholder="Email" class="rounded" onChange={changeHandler}/>
                   <br></br>
                   <br></br>
 
-                  <label style={{'color': '#ff5b00','fontFamily':'Tahoma'}} for="password">PASSWORD :  </label>
+                 
                   <input  type="password"  name="password" placeholder="Password"  class="rounded" onChange={changeHandler}  />
                   
 
@@ -126,8 +123,7 @@ const RegistrationForm=() =>{
                   
                   
               
-                  <label style={{'color': '#ff5b00','fontFamily':'Tahoma'}}>CONFIRM PASSWORD :  </label>
-                  <input type="password" name="confirmPassword" placeholder="Confirm Password" class="rounded" onChange={changeHandler}  />
+             <input type="password" name="confirmPassword" placeholder="Confirm Password" class="rounded" onChange={changeHandler}  />
                   
                 
                   <br></br>
@@ -135,8 +131,12 @@ const RegistrationForm=() =>{
                   <br></br>
              
               <button type="submit"  className="btn">Register</button>
-              
+              <br></br>
+              <br></br>
              
+              <Link to="/Main"><button>Sign In</button></Link>
+              
+              </div>
         </form>
         
           

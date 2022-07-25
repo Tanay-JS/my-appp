@@ -20,6 +20,7 @@ import FriendReq from './Components/FriendReq';
 import Receivedreq from './Components/Receivedreq'
 import Recereq1 from './Components/redirect/Recereq1';
 import Accereq from './Components/redirect/Accereq';
+import Detailsx from './Components/redirect/Detailsx';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -42,6 +43,8 @@ root.render(
     <Route path="/FriendReq" element={<FriendReq/>}/>
     <Route path="/Recereq1" element={<Recereq1/>}/>
     <Route path="/Accereq" element={<Accereq/>}/>
+    <Route path="/Detailsx" element={<Detailsx/>}/>
+
   </Routes>
     </BrowserRouter>
 );
