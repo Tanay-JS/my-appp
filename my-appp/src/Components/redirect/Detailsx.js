@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
+import "./details.css"
 
 function Detailsx() {
 
@@ -61,13 +62,38 @@ function Detailsx() {
   return (
     <div>
         <Link to="/Individual" style={{color:"#FF5B00",fontSize:"30px",float:"left"}} state={req16.transactionId.toEmail}>Back</Link> 
-        <h1>Loan took from:{req16.toName}</h1>
-        <h1>Amount:{req16.amount}RS</h1>
-        <h1>Duration:{req16.days}Days</h1>
-        <h1>Interest:{req16.interest}% </h1>
-        <h1>Amount peceived:{req16.amountPayed}</h1>
-        <h1>Amount payed back:{req16.amountPayedBack}</h1>   
-        <label style={{fontSize:"20px",marginRight:"10px"}}>Enter the amount of your choice:</label><input type="text" name="amount" onChange={changeHandler} placeholder='In Rupees' className='rounded'></input><br></br>
+        <br></br>
+        <center>
+        <table className='details'>
+          <tr>
+        <td className='detail'>Loan took from:</td >
+        <td className='detail'>{req16.toName}</td >
+        </tr>
+        <tr>
+        <td className='detail'>Amount:</td >
+          <td className='detail'>{req16.amount} Rs</td>
+        </tr>
+        <tr>
+        <td className='detail'>Duration:</td >
+          <td className='detail'>{req16.days} Days</td >
+        </tr>
+        <tr>
+        <td className='detail'>Interest:</td >
+        <td className='detail'>{req16.interest} % </td >
+        </tr>
+        <tr>
+        <td className='detail'>Amount peceived:</td>
+        <td className='detail'>{req16.amountPayed}</td>
+        </tr>
+        <tr>
+        <td className='detail'>Amount payed back:</td >
+        <td className='detail'>{req16.amountPayedBack}</td>
+        </tr>
+        </table>
+        </center>   
+        <br></br>
+        <label style={{fontSize:"20px",marginRight:"10px"}}>Enter the amount of your choice:</label><input type="text" name="amount" onChange={changeHandler} placeholder='In Rupees' className='rounded'></input>
+        <br></br><br></br>
         <button onClick={paymentHandler}>Pay Back</button>
     </div>
   )
