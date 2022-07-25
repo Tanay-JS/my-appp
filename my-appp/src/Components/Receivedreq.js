@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import Recereq from './redirect/Recereq1';
+import "./Receivedreq.css"
+
 
 function Receivedreq() {
 
@@ -81,11 +83,30 @@ function Receivedreq() {
 
   return (
     <div>
+
       <Link to="/Friends" style={{color:"#FF5B00",fontSize:"30px",float:"top"}}>Back</Link> 
-        <h1 style={{marginTop:"5%",fontSize:"75px"}}>Received Loan Requests:</h1>
-        {reqxs.borrowRequests.map(pbr=>(<div><h1>{pbr.name} {pbr.amount} RS </h1><Link to={"/Recereq1"} state={pbr.uniqueId}><button>View details</button></Link></div>))}
-        <h1 style={{marginTop:"5%",fontSize:"75px"}}>Accepted Loan Requests:</h1>
-        {reqxs.acceptedBorrowRequests.map(pbr1=>(<div><h1>{pbr1.name} {pbr1.amount} RS</h1><Link to={"/Accereq"} state={pbr1.uniqueId}><button>View details</button></Link></div>))}  
+      <center>
+        <h1 style={{marginTop:"5%",fontSize:"50px"}}>Received Loan Requests:</h1>
+        <table className='tab' style={{width:"50%",borderCollapse: "collapse"}}>
+          <tr>
+    
+            <th>Name</th>
+            <th>Amount</th>
+          
+          </tr>
+        {reqxs.borrowRequests.map(pbr=>(<><tr>
+        <td className='tab'>{pbr.name}</td> <td className='tab'>{pbr.amount} Rs</td>  <td ><Link to={"/Recereq1"} state={pbr.uniqueId}><button>View details</button></Link></td>
+        </tr></>))}</table>
+        <h1 style={{marginTop:"5%",fontSize:"50px"}}>Accepted Loan Requests:</h1>
+        <table className='tab' style={{width:"50%",borderCollapse: "collapse"}}>
+        <tr>
+    
+    <th>Name</th>
+    <th>Amount</th>
+  
+  </tr>
+          {reqxs.acceptedBorrowRequests.map(pbr1=>(<><tr><td className='tab'>{pbr1.name}</td> <td className='tab'>{pbr1.amount} RS</td> <td><Link to={"/Accereq"} state={pbr1.uniqueId}><button>View details</button></Link></td></tr></>))}</table>
+        </center>
     </div>
   )
 }
