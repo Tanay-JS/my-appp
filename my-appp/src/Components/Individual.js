@@ -127,8 +127,8 @@ function Individual() {
             </tr>
         </table>
         <h1 style={{marginTop:"10%"}}>Previously requested loans</h1>
-        {req15.map(hista => (<div>
-        {users1.email!=hista.transactionId.fromEmail &&
+        {/* {req15.map(hista => (<div>
+        {users1.email!=hista.transactionId.fromEmail && */}
         <table className='history'>
                   <tr>
                     <th>Name</th>
@@ -137,21 +137,24 @@ function Individual() {
                     <th>Duration</th>
                     <th>Action</th>
                   </tr>
-                   
                   
+                   
+                  {req15.map(hista => (<>
+        {users1.email!=hista.transactionId.fromEmail &&
     <tr style={{color:"#ff5b00",textAlign:"center"}}>
+    
                     <td>{hista.toName}</td>
                     <td>{hista.amount}</td>
                     <td>{hista.interest}</td>
                     <td>{hista.days}</td>
-                    <td><Link to={"/Detailsx"} state={hista.uniqueId}><button>View Details</button></Link></td>        
-    </tr>
-        </table>}</div>))}
+                    <td><Link to={"/Detailsx"} state={hista.uniqueId}><button>View Details</button></Link></td>
+                  </tr>}</>))}
+        </table>
         
       <Footer />  
       </div>
-    )
-  
+
+    ) 
 }
 
 export default Individual
